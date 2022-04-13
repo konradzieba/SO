@@ -1,0 +1,72 @@
+GR I
+
+Zad 1.
+mkdir programy
+mkdir /programy/linki
+mkdir dokumenty
+mkdir tajne
+
+Zad 2.
+cd dokumenty
+mcedit mojeDane -> wpisac imie -> F10 -> tak
+
+Zad 3.
+cd programy/linki
+ln mojeDane lt
+
+Zad 4.
+ln -s mojeDane ls
+
+Zad 5.
+find /DANE/programy -maxdepth 1 -mtime -10 -type f -exec cp '{}' /programy \;
+
+Zad 6.
+chmod 740 tajne
+
+Zad 7.
+
+#!/bin/bash
+`find ~/ -maxdepth 1 -type d>katalogi.txt`
+
+if [ -d ~/pliki ]; then
+	echo Istnieje
+else
+	echo Nie istnieje
+fi
+
+
+
+
+GR II
+
+Zad 1.
+mkdir programy/
+mkdir /programy/dokumenty
+mkdir linki
+mkdir tajne
+
+Zad 2.
+cd /programy/dokumenty
+mcedit mojeDane -> imie i nazwisko -> F10 -> Tak
+
+Zad 3.
+cd programy/dokumenty
+ln mojeDane lt.link
+
+Zad 4.
+ln -s mojeDane ls.link
+
+Zad 5.
+find /DANE/programy -maxdepth 1 -mtime +10 -type f -exec cp '{}' /programy \; 
+
+Zad 6.
+chmod 710 tajne
+
+Zad 7.
+#!/bin/bash
+`find ~/ -maxdepth 1 -type d>katalogi.txt`
+if [ -f ~/.bash_history ]; then
+	echo Istnieje
+else
+	echo Nie istnieje
+fi
